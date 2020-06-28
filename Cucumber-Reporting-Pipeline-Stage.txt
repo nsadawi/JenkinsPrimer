@@ -1,0 +1,15 @@
+node('master') {
+    // some block
+    stage('checkout') {
+        // add comment
+        git 'https://github.com/nsadawi/awesome-bdd-with-cucumber.git'
+    }
+    stage('Maven Verify') {
+	//add comment
+        sh label: '', script: 'mvn clean verify'
+    }
+    stage('Generate Cucumber Report') {
+        //add comment
+        cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target/', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
+    }
+}

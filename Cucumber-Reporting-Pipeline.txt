@@ -1,0 +1,9 @@
+node('master') {
+    
+    git 'https://github.com/nsadawi/awesome-bdd-with-cucumber.git'
+    
+    sh label: '', script: 'mvn clean verify'
+
+    cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target/', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
+
+}
