@@ -1,0 +1,8 @@
+Source Code Management
+https://github.com/nsadawi/jenkins-ci-dotnet.git
+
+Windows Batch Command
+nuget restore src/MyWindowsService/
+
+VS MSBuild
+src/MyWindowsService/MyWindowsService/Deploy-Windows-Service-Via-MSBuild.proj

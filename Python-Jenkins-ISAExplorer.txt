@@ -1,0 +1,10 @@
+https://github.com/nsadawi/isaExplorer.git
+
+virtualenv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+
+python -m unittest
+
+deactivate

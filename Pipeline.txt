@@ -1,0 +1,15 @@
+node {
+    
+    stage("Checkpit"){
+        git 'https://github.com/nsadawi/jenkins-ci-dotnet.git'
+    }
+
+    stage('Nuget'){
+        bat label: '', script: 'nuget restore src/MyWindowsService/'
+    }
+    
+    stage('Build'){
+        bat "\"${tool 'MyMSBuild'}\" src/MyWindowsService/MyWindowsService/Deploy-Windows-Service-Via-MSBuild.proj"
+
+    }
+}

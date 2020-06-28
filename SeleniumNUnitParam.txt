@@ -1,0 +1,11 @@
+SCM
+https://github.com/nsadawi/Jenkins-DotNet-SeleniumNUnitParam.git
+
+Build -> Windows Batch Command
+"C:\ProgramData\chocolatey\bin\nuget.exe" restore SeleniumNUnitParam.sln
+
+MSBuild
+Build File -> SeleniumNUnitParam.sln
+
+Build -> Windows Batch Command
+C:\ProgramData\chocolatey\bin\nunit3-console.exe "SeleniumNUnitParam/bin\Debug/SeleniumNUnitParam.dll"
