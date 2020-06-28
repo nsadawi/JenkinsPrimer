@@ -1,10 +1,7 @@
-https://github.com/nsadawi/isaExplorer.git
+https://github.com/nsadawi/python-unittest-example.git
 
 virtualenv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-
-
-python -m unittest
-
+nosetests tests
 deactivate
