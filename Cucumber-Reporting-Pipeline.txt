@@ -1,5 +1,5 @@
 node('master') {
-    
+    // no stages .. all steps in one go
     git 'https://github.com/nsadawi/awesome-bdd-with-cucumber.git'
     
     sh label: '', script: 'mvn clean verify'

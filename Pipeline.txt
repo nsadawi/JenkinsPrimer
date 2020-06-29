@@ -1,6 +1,7 @@
+// Pipeline to Build .Net project
 node {
     
-    stage("Checkpit"){
+    stage("Checkout"){
         git 'https://github.com/nsadawi/jenkins-ci-dotnet.git'
     }
 
