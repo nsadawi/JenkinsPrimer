@@ -1,0 +1,21 @@
+node('master') {
+    // some block
+    stage('Clone Python Proj from Github') {
+    // some block
+        git 'https://github.com/nsadawi/python-unittest-example.git'
+    }
+    stage('Create and Activate Python Virtual Env') {
+        sh label: '', script: '''virtualenv .venv
+        source .venv/bin/activate'''
+    }
+    stage('Install Required packages'){
+        sh label: '', script: '''pip install -r requirements.txt'''
+    }
+    stage('Run the Tests'){
+        sh label: '', script: '''nosetests tests'''
+    }
+    stage('Deactivate Python Virtual Env'){
+        sh label: '', script: '''deactivate'''
+    }
+
+}
